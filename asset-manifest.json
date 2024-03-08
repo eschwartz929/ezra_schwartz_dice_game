@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/eschwartz929/ezra_schwartz_dice_game/static/css/main.31f07d44.css",
-    "main.js": "/eschwartz929/ezra_schwartz_dice_game/static/js/main.78104589.js",
-    "static/js/453.d838f528.chunk.js": "/eschwartz929/ezra_schwartz_dice_game/static/js/453.d838f528.chunk.js",
-    "index.html": "/eschwartz929/ezra_schwartz_dice_game/index.html",
-    "main.31f07d44.css.map": "/eschwartz929/ezra_schwartz_dice_game/static/css/main.31f07d44.css.map",
-    "main.78104589.js.map": "/eschwartz929/ezra_schwartz_dice_game/static/js/main.78104589.js.map",
-    "453.d838f528.chunk.js.map": "/eschwartz929/ezra_schwartz_dice_game/static/js/453.d838f528.chunk.js.map"
+    "main.css": "/ezra_schwartz_dice_game/static/css/main.31f07d44.css",
+    "main.js": "/ezra_schwartz_dice_game/static/js/main.f4bf81fc.js",
+    "static/js/453.d838f528.chunk.js": "/ezra_schwartz_dice_game/static/js/453.d838f528.chunk.js",
+    "index.html": "/ezra_schwartz_dice_game/index.html",
+    "main.31f07d44.css.map": "/ezra_schwartz_dice_game/static/css/main.31f07d44.css.map",
+    "main.f4bf81fc.js.map": "/ezra_schwartz_dice_game/static/js/main.f4bf81fc.js.map",
+    "453.d838f528.chunk.js.map": "/ezra_schwartz_dice_game/static/js/453.d838f528.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31f07d44.css",
-    "static/js/main.78104589.js"
+    "static/js/main.f4bf81fc.js"
   ]
 }
