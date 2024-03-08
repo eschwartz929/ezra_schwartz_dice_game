@@ -1,3 +1,9 @@
+.game-board {
+    width: 50%;
+    height: 20%;
+    border: solid black 2px;
+}
+
 .dice-wrapper {
     display: flex;
     justify-content: center;
@@ -5,4 +11,14 @@
 
 .dice {
     margin: 5px;
+}
+
+.roll-button {
+    margin-right: 10px;
+    color: white;
+    background-color: rgb(106, 106, 228);
+}
+
+.locked {
+    opacity: 0.2;
 }

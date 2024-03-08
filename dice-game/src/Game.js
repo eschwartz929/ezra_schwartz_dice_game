@@ -1,7 +1,18 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import './Game.css'
 
+const instructions = 'The object of the game is to get all 5 dice to match in 3 rolls or fewer. After each roll, you can "lock" a number, to keep it in place.'
+
 function Game() {
+    return (
+        <>
+            <p>{instructions}</p>
+            <GameBoard />
+        </>
+    )
+}
+
+function GameBoard() {
     const defaultGame = [
         {value: 1, locked: false}, 
         {value: 2, locked: false}, 
@@ -55,32 +66,45 @@ function Game() {
     }
 
     return (
-        <>            
+        <div>        
+            <div>
+                {!completed && <button className="roll-button" onClick={roll}>Roll Dice</button>}
+                <span>{rollsRemaining} rolls left</span>
+            </div>
+
             <div className="dice-wrapper">
                 {dice.map((item, index) => 
-                    <Dice key={index} value={item.value} index={index} locked={item.locked} setLocked={() => lockDice(index)}/>
+                    <Dice 
+                        key={index} 
+                        value={item.value} 
+                        index={index} 
+                        locked={item.locked} 
+                        setLocked={() => lockDice(index)}
+                        rollsRemaining={rollsRemaining}/>
                 )}
             </div>
 
-            {!completed && <button onClick={roll}>Roll Dice</button>}
-            {completed && <button onClick={restartGame}>New Game</button>
+            {completed && 
+                <div>
+                    {winner && <span>Congratulations! You have won!</span>}
+                    {!winner && <span>Better luck next time!</span>}
+                    <br/>
+                    <button onClick={restartGame}>New Game</button>
+                </div>
             }
-            <h4>{rollsRemaining} rolls left</h4>
 
-            {winner && <span>Winner!</span>}
-            {!winner && completed && <span>Try Again</span>}
-        </>
+        </div>
 
     )
 }
 
-function Dice({value, index, locked, setLocked}) {
+function Dice({value, index, locked, setLocked, rollsRemaining}) {
 
     return (
         <div className="dice">
-            <img src={"dice" + value + ".png"} alt={value} width="40" height="40"/>
+            <img className={locked ? 'locked' : ''} src={"/ezra_schwartz_dice_game/dice" + value + ".png"} alt={value} width="40" height="40"/>
             <br/>
-            <button onClick={() => setLocked(index)}>{locked ? 'Unlock' : 'Lock'}</button>
+            {rollsRemaining < 3 && rollsRemaining > 0 && <button onClick={() => setLocked(index)}>{locked ? 'Unlock' : 'Lock'}</button>}
         </div>
     )
 }
