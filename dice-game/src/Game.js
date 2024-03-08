@@ -55,10 +55,7 @@ function Game() {
     }
 
     return (
-        <>
-            <h3>Game</h3>
-            
-
+        <>            
             <div className="dice-wrapper">
                 {dice.map((item, index) => 
                     <Dice key={index} value={item.value} index={index} locked={item.locked} setLocked={() => lockDice(index)}/>
