@@ -1,0 +1,8 @@
+.dice-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.dice {
+    margin: 5px;
+}
